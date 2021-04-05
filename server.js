@@ -8,8 +8,6 @@ app.use(morgan("short"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname + "/public"));
 
-
-
 app.post("/login", (req, res)=>{
     console.log(req.body)
     const passwd_Real = "select password from users where usuario = ${req.body.login}"
